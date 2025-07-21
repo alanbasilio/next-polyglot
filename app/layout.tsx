@@ -40,15 +40,11 @@ export default async function RootLayout({
     <html lang={lng} dir={dir(lng)} suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        suppressHydrationWarning
       >
-        <ThemeProvider
-          attribute='class'
-          defaultTheme='system'
-          enableSystem
-          disableTransitionOnChange
-        >
-          <QueryClientProvider>{children}</QueryClientProvider>
-        </ThemeProvider>
+        <QueryClientProvider>
+          <ThemeProvider>{children} </ThemeProvider>
+        </QueryClientProvider>
       </body>
     </html>
   );
