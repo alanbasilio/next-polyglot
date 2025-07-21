@@ -12,7 +12,7 @@ export const config = {
 
 const cookieName = 'i18next';
 
-export function middleware(req: NextRequest) {
+export const middleware = (req: NextRequest) => {
   // Don't redirect static files
   if (req.nextUrl.pathname.match(/\.(svg|png|jpg|jpeg|gif|css|js)$/)) {
     return NextResponse.next();
@@ -45,4 +45,4 @@ export function middleware(req: NextRequest) {
   }
 
   return NextResponse.next();
-}
+};

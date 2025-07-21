@@ -32,11 +32,11 @@ i18next
     preload: runsOnServerSide ? languages : [],
   });
 
-export function useTranslation(
+export const useTranslation = (
   lng: string,
   ns: string = defaultNS,
   options: { keyPrefix?: string } = {}
-) {
+) => {
   const ret = useTranslationOrg(ns, options);
   const { i18n } = ret;
 
@@ -52,4 +52,4 @@ export function useTranslation(
   }, [lng, i18n]);
 
   return ret;
-}
+};

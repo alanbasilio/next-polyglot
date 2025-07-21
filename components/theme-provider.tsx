@@ -3,9 +3,19 @@
 import { type ComponentProps } from 'react';
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
 
-export function ThemeProvider({
+export const ThemeProvider = ({
   children,
   ...props
-}: ComponentProps<typeof NextThemesProvider>) {
-  return <NextThemesProvider {...props}>{children}</NextThemesProvider>;
-}
+}: ComponentProps<typeof NextThemesProvider>) => {
+  return (
+    <NextThemesProvider
+      attribute='class'
+      defaultTheme='light'
+      enableSystem={true}
+      disableTransitionOnChange
+      {...props}
+    >
+      {children}
+    </NextThemesProvider>
+  );
+};
