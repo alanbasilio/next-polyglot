@@ -1,0 +1,20 @@
+# Global code owners
+# These owners will be the default owners for everything in
+# the repo. Unless a later match takes precedence, these users
+# will be requested for review when someone opens a pull request.
+* @alanbasilio
+
+# Dependency updates
+# Dependabot PRs will automatically request review from these owners
+package.json @alanbasilio
+yarn.lock @alanbasilio
+.github/dependabot.yml @alanbasilio
+
+# GitHub Actions and CI/CD
+.github/workflows/ @alanbasilio
+
+# Configuration files
+*.config.* @alanbasilio
+.*rc.* @alanbasilio
+tsconfig.json @alanbasilio
+next.config.ts @alanbasilio 
