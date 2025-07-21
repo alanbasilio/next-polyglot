@@ -4,7 +4,6 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import '@/app/globals.css';
 
 import { languages, QueryClientProvider } from '@/lib';
-import { dir } from 'i18next';
 
 import { ThemeProvider } from '@/components/theme-provider';
 
@@ -37,7 +36,7 @@ export default async function RootLayout({
   const { lng } = await params;
 
   return (
-    <html lang={lng} dir={dir(lng)} suppressHydrationWarning>
+    <html lang={lng} suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning
