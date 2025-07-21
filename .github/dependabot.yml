@@ -10,8 +10,6 @@ updates:
       timezone: 'America/Sao_Paulo'
     labels:
       - 'dependencies'
-    reviewers:
-      - 'alanbasilio'
     assignees:
       - 'alanbasilio'
     open-pull-requests-limit: 10

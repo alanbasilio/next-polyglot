@@ -194,7 +194,7 @@ public/locales/es/common.json
 ### Using Translations
 
 ```typescript
-import { useTranslation } from '@/lib';
+import { useTranslation } from 'react-i18next';
 
 export default function Component() {
   const { t } = useTranslation('en');
